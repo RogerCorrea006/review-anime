@@ -16,23 +16,33 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col d-flex align-items-center">
-                            <h1>Review's</h1>  
+                            <h1>Nova Review</h1>  
                             </div>
                         </div> 
                         <div class="row">
                           <div class="col">
-                            <a href="newReview.html">teste</a> 
+                            <form id="newReviewForm">
+                                <div class="mb-3">
+                                  <label for="exampleInputEmail" class="form-label">Nome do Jogo</label>
+                                  <input type="text" name="gameName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                </div>
+                                <div class="mb-3 form-check">
+                                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
                           </div> 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
+
 </body>
 
-<script src="scripts/reviewsPage.js">
-
-</script>
+<script src="scripts/newReviewPage.js"></script>
 
 </html>

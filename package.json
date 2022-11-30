@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/RogerCorrea006/review-games#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "axios": "^1.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql-tag": "^2.12.6"
   }
 }
