@@ -1,14 +1,16 @@
 version: '3.6'
 services:
   postgres:
-    image: postgres:12
+    image: postgres:alpine
     restart: always
     volumes:
     - db_data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: postgrespassword
+      TZ: "America/Sao_Paulo"
+      PGTZ: "America/Sao_Paulo"
   graphql-engine:
-    image: hasura/graphql-engine:v2.15.1
+    image: hasura/graphql-engine:v2.0.10
     ports:
     - "8182:8080"
     depends_on:
@@ -27,7 +29,7 @@ services:
       ## uncomment next line to run console offline (i.e load console assets from server instead of CDN)
       # HASURA_GRAPHQL_CONSOLE_ASSETS_DIR: /srv/console-assets
       ## uncomment next line to set an admin secret
-      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_ADMIN_SECRET: 123
 volumes:
   db_data:
 

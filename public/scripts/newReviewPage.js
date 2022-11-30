@@ -7,13 +7,33 @@ function submitReview(data){
         return
     }
 
+    if(formData.get('score') == ""){
+        showToast('Preencha a nota do jogo', 'error')
+        return
+    }
+
+    if(formData.get('review') == ""){
+        showToast('Preencha a review do jogo', 'error')
+        return
+    }
+
+    let object = {};
+    formData.forEach((value, key) => object[key] = value);
+    let json = JSON.stringify(object);
+
     fetch('/newReview', {
         method: 'POST',
-        body: formData
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        body: json
     }).then((res) => {
-        return res.json()
+        if(!res.ok) throw res.body.json()
+        return res.body.json()
     }).then((data) => {
         console.log("sucesso")
+    }).catch((error) => {
+        console.log(error.message)
     })
 }
 
