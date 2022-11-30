@@ -23,6 +23,8 @@ async function hasuraRequest({ query, variables }) {
         );
     
         if(responseHasura.data.errors) throw new Error(responseHasura.data.errors[0].message)
+
+        return responseHasura.data
     } catch (error) {
         console.log(error.message)
         throw new Error(error.message)
