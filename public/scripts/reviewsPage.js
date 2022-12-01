@@ -8,7 +8,7 @@ async function getReview(){
     const graphqlQuery = {
         "operationName": "getReviews",
         "query": `query getReviews{
-            review {
+            reviews {
               id
               name
               review
@@ -24,12 +24,28 @@ async function getReview(){
         "body": JSON.stringify(graphqlQuery)
     };
 
-    fetch('http://localhost:7540/v1/graphql', options).then((res) => { 
+    fetch('http://localhost:8182/v1/graphql', options).then((res) => { 
         console.log(res)
         return res.json()
     }).then((data) => {
         console.log(data)
+
+        drawReviews(data.data.reviews)
     })
+}
+
+function drawReviews(reviews){
+    
+    for(let review of reviews){
+        let docCopy = document.querySelector('.reviewCardModel').cloneNode(true)
+        let row = document.querySelector('#rowReviews')
+
+        docCopy.hidden = false
+        docCopy.querySelector('.titleReview').textContent = review.name
+        docCopy.querySelector('.reviewText').textContent = review.review
+
+        row.appendChild(docCopy)
+    }
 }
 
 window.onload = () => {
