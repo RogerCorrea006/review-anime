@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul class="nav pt-2 pb-2" style="background-color: #ebebeb;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="newReview.html">Nova Review</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="apiAnime.html">Api</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Sobre</a>
+        </li>
+    </ul>
+    <div class="container p-3">
+        <div>
+          <input autocomplete="off" onchange="getAnimeByName()" id="search-anime"
+            class="form-control form-control-lg input-search" type="text" placeholder="Faça uma busca. Ex: Naruto"
+            aria-label=".form-control-lg example">
+        </div>
+      </div>
+
+      <div class="container p-3">
+        <div id="showAnimes" class="row p-3">
+          <div id="cardAnime" class="col-md-4 col-12 mb-3 d-none">
+            <a class="text-decoration-none" href="">
+              <div class="card bg-transparent border-0" style="width: 18rem;">
+                <img src="./source/img/17405.jpg" alt="...">
+                <div class="card-body p-0 pt-2">
+                  <h5 class="card-title text-secondary text-truncate">Naruto</h5>
+                  <p class="card-text text-secondary text-truncate fs-6">Anime de um desgraçado que corre atras de um emo
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+    
+        </div>
+      </div>
+</body>
+
+<script src="scripts/apiGamesPage.js">
+
+</script>
+
+</html>

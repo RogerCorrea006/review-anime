@@ -1,0 +1,16 @@
+{
+    "authors": [
+        {
+            "name": "Roger Henrique Rodrigues Corrêa",
+            "class": "BSI20",
+            "description": "Formado em Técnico em informática, cursando Bacharelado em Sistemas de Informação",
+            "path": "./assets/pexe1.jpg"
+        },
+        {
+            "name": "Paulo Fernando Rodrigues",
+            "class": "BSI20",
+            "description":"Formado em Técnico em informática, cursando Bacharelado em Sistemas de Informação",
+            "path": "./assets/pexe2.jpg"
+        }
+    ]
+}
