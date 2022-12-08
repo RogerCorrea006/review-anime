@@ -29,9 +29,10 @@ function submitReview(data){
         body: json
     }).then((res) => {
         if(!res.ok) throw res.body.json()
-        return res.body.json()
+        return res.body
     }).then((data) => {
         console.log("sucesso")
+        showToast("", 'success')
     }).catch((error) => {
         console.log(error.message)
     })

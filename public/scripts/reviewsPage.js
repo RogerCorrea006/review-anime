@@ -43,6 +43,7 @@ function drawReviews(reviews){
         docCopy.hidden = false
         docCopy.querySelector('.titleReview').textContent = review.name
         docCopy.querySelector('.reviewText').textContent = review.review
+        docCopy.querySelector('.scoreReview').textContent = review.score + "/10"
 
         row.appendChild(docCopy)
     }
